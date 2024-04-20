@@ -32,3 +32,7 @@ final class Encoding {
     public static function encodeString($str) {
         if (is_array($str)) {
             $str = $str[0];
+        }
+        return pack("Na*", strlen($str), $str);
+    }
+}
